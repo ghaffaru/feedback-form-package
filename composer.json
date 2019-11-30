@@ -1,0 +1,19 @@
+{
+    "name": "ghaff/feedback",
+    "description": "Laravel package to create and handle feedback forms",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ghaffaru",
+            "email": "mudashiruagm@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ghaff\\Feedback\\": "src/"
+        }
+    }
+}
