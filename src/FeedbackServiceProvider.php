@@ -32,5 +32,6 @@ class FeedbackServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/assets' => public_path('vendor/feedback'),
         ], 'public');
+        $this->loadMigrationsFrom(__DIR__. '/database/migrations');
     }
 }
