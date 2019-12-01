@@ -1,8 +1,9 @@
 @component('mail::message')
 # Introduction
 
-There is a new message from {{ $name }}
-{{ $message }}
+There is a new message from {{$name}} <br />
+Message : 
+{{$message}}
 
 @component('mail::button', ['url' => ''])
 Button Text

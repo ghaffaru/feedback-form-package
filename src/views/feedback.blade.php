@@ -26,7 +26,8 @@
         </div>
         <div class="form-group">
                 <label for="message">Message</label>
-                <input type="text" name="message" class="form-control" />
+                <textarea name="message" id="" cols="120" rows="10" class="form-control"></textarea>
+                {{-- <input type="text" name="message" class="form-control" /> --}}
             </div>
             <button type="submit" class="btn btn-primary">Send mail</button>
     </form>

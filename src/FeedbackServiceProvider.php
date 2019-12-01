@@ -14,6 +14,9 @@ class FeedbackServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->mergeConfigFrom(
+            __DIR__.'/config/feedback.php', 'feedback'
+        );
     }
 
     /**
@@ -33,5 +36,10 @@ class FeedbackServiceProvider extends ServiceProvider
             __DIR__.'/assets' => public_path('vendor/feedback'),
         ], 'public');
         $this->loadMigrationsFrom(__DIR__. '/database/migrations');
+     
+        $this->publishes([
+            __DIR__.'/config/feedback.php' => config_path('feedback.php'),
+        ]);
+
     }
 }

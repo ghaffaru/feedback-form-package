@@ -19,7 +19,7 @@ class FeedbackController extends Controller
 
     public function send(Request $request) 
     {
-        Mail::queue('mudashiruagm@gmail.com')->send(
+        Mail::to(config('feedback.send_email_to'))->queue(
             new FeedbackMailable($request->subject, $request->message, $request->name));
         Feedback::create($request->all());
 

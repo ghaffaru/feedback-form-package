@@ -19,12 +19,12 @@ class FeedbackMailable extends Mailable
      *
      * @return void
      */
-    public function __construct($message, $subject, $name)
+    public function __construct($subject, $message, $name)
     {
         //
-        $message = $this->message;
-        $subject = $this->subject;
-        $name = $this->name;
+        $this->subject = $subject;
+        $this->message = $message;
+        $this->name = $name;
     }
 
     /**
