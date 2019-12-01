@@ -1,6 +1,7 @@
 # Feedback form package
 Laravel package to create and handle feedback forms on your website
-
+[![Stars](https://img.shields.io/github/stars/Ghaffaru15/feedback-form-package.svg?style=flat-square)](https://github.com/Ghaffaru15/feedback-form-package/stargazers)
+[![Issues](https://img.shields.io/github/issues/Ghaffaru15/feedback-form-package.svg?style=flat-square)](https://github.com/Ghaffaru15/feedback-form-package/issues)
 ## Installation
 Use composer to install the package
 
