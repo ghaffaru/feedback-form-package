@@ -15,5 +15,12 @@
         "psr-4": {
             "Ghaff\\Feedback\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ghaff\\Feedback\\FeedbackServiceProvider"
+            ]
+        }
     }
 }
