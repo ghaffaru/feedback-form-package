@@ -3,7 +3,11 @@
 namespace Ghaff\Feedback\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Ghaff\Feedback\Mail\FeedbackMailable;
+use Ghaff\Feedback\Models\Feedback;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 
 class FeedbackController extends Controller
 {
@@ -15,6 +19,10 @@ class FeedbackController extends Controller
 
     public function send(Request $request) 
     {
-        return $request->all();
+        Mail::queue('mudashiruagm@gmail.com')->send(
+            new FeedbackMailable($request->subject, $request->message, $request->name));
+        Feedback::create($request->all());
+
+        return redirect(route('feedback'));
     }
 }
